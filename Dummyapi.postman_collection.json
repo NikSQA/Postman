@@ -1,0 +1,650 @@
+{
+	"info": {
+		"_postman_id": "df735653-3c5d-41f0-b98c-563b1a892400",
+		"name": "Dummyapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Data",
+			"item": [
+				{
+					"name": "Create_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Nik\",\r\n    \"lastName\": \"SL\",\r\n    \"email\": \"GHGHnj@mail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/user/create",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User_list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/user",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_User_by_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/user/646f722de55e85319b3f4f28",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"user",
+								"646f722de55e85319b3f4f28"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User_list_Pagination",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/user?page=0&limit=5",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0",
+									"description": "Limit value should be in range [5-50]. Default value: 20"
+								},
+								{
+									"key": "limit",
+									"value": "5",
+									"description": "Page value should be in range [0-999]. Default value: 0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Nic\",\r\n    \"lastName\": \"Andersen\",\r\n    \"phone\": \"7488484884\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/user/646f7549e55e8519b83f5106",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"user",
+								"646f7549e55e8519b83f5106"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post Data",
+			"item": [
+				{
+					"name": "Create_Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"text\": \"test1\",\r\n\"image\": \"https://randomuser.me/api/portraits/women/58.jpg\",\r\n\"likes\": 5,\r\n\"tags\": \"qa\",\r\n\"owner\": \"646f722de55e85319b3f4f28\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/post/create",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post_List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/post?page=0&limit=5",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"post"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post_by_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/post/646f8dccff945d46e1327d10",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"post",
+								"646f8dccff945d46e1327d10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List_by_user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/user/646f722de55e85319b3f4f28/post",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"user",
+								"646f722de55e85319b3f4f28",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List_by_tag",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/tag/qa/post",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"tag",
+								"qa",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"Лабрадор\",\r\n    \"image\": \"https://img.dummyapi.io/photo-1564694202779-bc908c327862.jpg\",\r\n    \"likes\": 101,\r\n    \"link\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/post/646f8dccff945d46e1327d10",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"post",
+								"646f8dccff945d46e1327d10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/post/60d21b8667d0d8992e610d3f",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"post",
+								"60d21b8667d0d8992e610d3f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment Data",
+			"item": [
+				{
+					"name": "Create_comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"message\": \"Привет!\",\r\n\"owner\": \"646f722de55e85319b3f4f28\",\r\n\"post\": \"646f8dccff945d46e1327d10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/comment/create",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"comment",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/comment?page=0&limit=5",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"comment"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List_by_user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/user/646f722de55e85319b3f4f28/comment",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"user",
+								"646f722de55e85319b3f4f28",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List_by_post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/post/646f8dccff945d46e1327d10/comment",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"post",
+								"646f8dccff945d46e1327d10",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/comment/646f722de55e85319b3f4f28",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"comment",
+								"646f722de55e85319b3f4f28"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Negative_test",
+			"item": [
+				{
+					"name": "User_list(no auth)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/user",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dummyapi}}/user/646f7549e55e8519b83f5106",
+							"host": [
+								"{{dummyapi}}"
+							],
+							"path": [
+								"user",
+								"646f7549e55e8519b83f5106"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "app-id",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "646f5940eed066d30c2a50cb",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "dummyapi",
+			"value": "https://dummyapi.io/data/v1"
+		}
+	]
+}
